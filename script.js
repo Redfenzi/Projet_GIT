@@ -7,6 +7,7 @@ function enregistrementValeur() {
     {
         tabSaisi[index] = document.getElementById(String(index)).value;        
     }
+    Affichage();
     console.log(tabSaisi);
 }
 function resultAleatoire() {
@@ -16,6 +17,14 @@ function resultAleatoire() {
     }
     console.log(tabResult);
 }
+function Affichage()
+{
+    document.querySelector('form').style.display='none';
+    //$('form').hide();
+    resultAleatoire();
+}
+    
+   
 
-resultAleatoire();
+//Affichage();
 
