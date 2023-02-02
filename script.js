@@ -1,3 +1,11 @@
+/* test compare()*/
+let lotGagnant = [5,4,8,3,1,6,8];
+
+let ticketPerdant = [3,4,5, 8, 9, 6, 3];
+let ticketGagnant = [5,4,8,3,1,6,8];
+
+
+/* */
 let tabResult = new Array();
 
 let tabSaisi = new Array();
@@ -15,6 +23,12 @@ function resultAleatoire() {
         tabResult[i]=Math.floor(Math.random() * (50 - 1) + 1);
     }
     console.log(tabResult);
+}
+
+//compare ticket joueur et ticket gagnant
+function compare(tickGagnant, tickJoueur){
+    
+    return tickGagnant.every((value,index) => value === tickJoueur[index]);
 }
 
 resultAleatoire();
