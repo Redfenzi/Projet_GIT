@@ -1,3 +1,5 @@
+
+/* */
 let tabResult = new Array();
 
 let tabSaisi = new Array();
@@ -12,19 +14,22 @@ function enregistrementValeur() {
 }
 function resultAleatoire() {
     
-    for(let i =0;i<7;i++){
+    for(let i =0;i<1;i++){
         tabResult[i]=Math.floor(Math.random() * (50 - 1) + 1);
     }
     console.log(tabResult);
 }
 function Affichage()
 {
-    document.querySelector('form').style.display='none';
-    //$('form').hide();
     resultAleatoire();
+    console.log(compare(tabResult,tabSaisi));
 }
+
+//compare ticket joueur et ticket gagnant
+function compare(tickGagnant, tickJoueur){
     
-   
+    return tickGagnant.every((value,index) => value == tickJoueur[index]);
+}
 
-//Affichage();
 
+//console.log(compare(tabResult,tabSaisi));
